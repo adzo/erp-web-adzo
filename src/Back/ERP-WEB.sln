@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{6E9A8649-21B8-489E-9272-1B32E00C8858}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsi.Erp.IdentityManagment", "Packages\Tsi.Erp.IdentityManagment\Tsi.Erp.IdentityManagment.csproj", "{58229EE9-EC87-4902-9AA3-CCB5D1D076E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsi.Erp.Extensions", "Packages\Tsi.Erp.Extensions\Tsi.Erp.Extensions.csproj", "{DBAE97B6-6D97-4FCB-B8C5-64245EF04C53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58229EE9-EC87-4902-9AA3-CCB5D1D076E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58229EE9-EC87-4902-9AA3-CCB5D1D076E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58229EE9-EC87-4902-9AA3-CCB5D1D076E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58229EE9-EC87-4902-9AA3-CCB5D1D076E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBAE97B6-6D97-4FCB-B8C5-64245EF04C53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBAE97B6-6D97-4FCB-B8C5-64245EF04C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBAE97B6-6D97-4FCB-B8C5-64245EF04C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBAE97B6-6D97-4FCB-B8C5-64245EF04C53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{58229EE9-EC87-4902-9AA3-CCB5D1D076E0} = {6E9A8649-21B8-489E-9272-1B32E00C8858}
+		{DBAE97B6-6D97-4FCB-B8C5-64245EF04C53} = {6E9A8649-21B8-489E-9272-1B32E00C8858}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D091FBFE-E6C3-4E65-955E-BF9AE9002EE9}
+	EndGlobalSection
+EndGlobal
