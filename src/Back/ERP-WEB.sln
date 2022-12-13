@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{6E9A8649-21B8-489E-9272-1B32E00C8858}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tsi.Erp.Shared", "Packages\Tsi.Erp.Shared\Tsi.Erp.Shared.csproj", "{79530B41-C4B2-49CF-9405-3DC3564E2CA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tsi.Erp.Shared", "Libraries\Tsi.Erp.Shared\Tsi.Erp.Shared.csproj", "{79530B41-C4B2-49CF-9405-3DC3564E2CA2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "microservices", "microservices", "{81E7156A-9FAE-4800-A11C-9F79F384BEDC}"
 EndProject
