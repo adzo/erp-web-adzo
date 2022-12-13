@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "qA42Wica7Khm8uykAJWDVG+3uaPzeSm8sRO+FmWGq8+qoWud0swIxG8d8ahTpqfVhCUKQwmJKulz8EEfjs8e8Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\selmi\\Development\\Tsi\\ErpWeb\\src\\Back\\Microservices\\Tsi.Erp.FirstApi\\Tsi.Erp.FirstApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\selmi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\selmi\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
+    "C:\\Users\\selmi\\.nuget\\packages\\tsi.erp.shared\\1.0.0\\tsi.erp.shared.1.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://localhost:5555/v3/index.json'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

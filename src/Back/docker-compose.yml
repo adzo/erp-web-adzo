@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  tsi.erp.firstapi:
+    image: ${DOCKER_REGISTRY-}tsierpfirstapi
+    build:
+      context: .
+      dockerfile: Microservices/Tsi.Erp.FirstApi/Dockerfile
+
+  tsi.erp.apigateway:
+    image: ${DOCKER_REGISTRY-}tsierpapigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Tsi.Erp.ApiGateway/Dockerfile
+

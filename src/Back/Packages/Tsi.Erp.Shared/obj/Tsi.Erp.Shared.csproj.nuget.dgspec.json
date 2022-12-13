@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\selmi\\Development\\Tsi\\ErpWeb\\src\\Back\\Packages\\Tsi.Erp.Shared\\Tsi.Erp.Shared.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\selmi\\Development\\Tsi\\ErpWeb\\src\\Back\\Packages\\Tsi.Erp.Shared\\Tsi.Erp.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\selmi\\Development\\Tsi\\ErpWeb\\src\\Back\\Packages\\Tsi.Erp.Shared\\Tsi.Erp.Shared.csproj",
+        "projectName": "Tsi.Erp.Shared",
+        "projectPath": "C:\\Users\\selmi\\Development\\Tsi\\ErpWeb\\src\\Back\\Packages\\Tsi.Erp.Shared\\Tsi.Erp.Shared.csproj",
+        "packagesPath": "C:\\Users\\selmi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\selmi\\Development\\Tsi\\ErpWeb\\src\\Back\\Packages\\Tsi.Erp.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\selmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://localhost:5555/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
