@@ -6,10 +6,3 @@ services:
     build:
       context: .
       dockerfile: Microservices/Tsi.Erp.FirstApi/Dockerfile
-
-  tsi.erp.apigateway:
-    image: ${DOCKER_REGISTRY-}tsierpapigateway
-    build:
-      context: .
-      dockerfile: ApiGateway/Tsi.Erp.ApiGateway/Dockerfile
-

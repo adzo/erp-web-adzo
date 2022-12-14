@@ -1,16 +1,35 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Tsi.Erp.Shared.Abstractions;
+using Tsi.Erp.Shared.Internals;
 
 namespace Tsi.Erp.Shared
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection BuildMicroserviceDependencies<TFlag>(this IServiceCollection services)
+        // As a Flag, use your context class!
+        public static IServiceCollection BuildMicroserviceDependencies<TFlag>(this IServiceCollection services, IConfiguration configuration) where TFlag: DbContext
         {
+            ControlConfiguration(configuration);
+
             services.AddApplicationDependecies<TFlag>();
+
+            services.AddMicroServiceDbContext<TFlag>(configuration);
 
             services.AddControllers();
 
             return services;
+        }
+
+        private static void ControlConfiguration(IConfiguration configuration)
+        {
+            //Control if connection string set properly
+            if (string.IsNullOrEmpty(configuration.GetConnectionString("default")))
+            {
+                throw new ApplicationException($"No connection string found in configuration with the name 'default'");
+            }
+            
         }
 
         private static IServiceCollection AddApplicationDependecies<TFlag>(this IServiceCollection services)
@@ -24,6 +43,40 @@ namespace Tsi.Erp.Shared
 
             return services;
         }
+
+        private static IServiceCollection AddMicroServiceDbContext<TFlag>(this IServiceCollection services, IConfiguration configuration) where TFlag : DbContext
+        {
+            var dbContextTypes = typeof(TFlag)
+                .Assembly
+                .ExportedTypes
+                .Where(t => t.IsAssignableTo(typeof(DbContext)) && !t.IsAbstract && !t.IsInterface)
+                .ToList();
+
+            // No dbContext found
+            if(!dbContextTypes.Any() )
+            {
+                return services;
+            }
+
+            // check if multiple dbContext declared in micro service
+            if (dbContextTypes.Count > 1)
+            {
+                throw new ApplicationException($"Cannot have multiple DbContext classes in your microservice {typeof(TFlag).Assembly}. Found types: {string.Join(',', dbContextTypes.Select(t => t.Name))}");
+            }
+
+            Context.ApplicationContextType = typeof(TFlag);
+
+            services.AddDbContext<TFlag>(options =>
+            {
+                options.UseSqlServer(configuration.GetConnectionString("default"));
+            });
+
+            services.AddScoped<IDatabaseTransaction, DatabaseTransaction<TFlag>>();
+
+            return services;
+        }
+
+        
 
         private static IServiceCollection AddServices<TFlag>(this IServiceCollection services)
         {

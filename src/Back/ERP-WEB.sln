@@ -3,23 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{6E9A8649-21B8-489E-9272-1B32E00C8858}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{6E9A8649-21B8-489E-9272-1B32E00C8858}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tsi.Erp.Shared", "Libraries\Tsi.Erp.Shared\Tsi.Erp.Shared.csproj", "{79530B41-C4B2-49CF-9405-3DC3564E2CA2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "microservices", "microservices", "{81E7156A-9FAE-4800-A11C-9F79F384BEDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsi.Erp.FirstApi", "Microservices\Tsi.Erp.FirstApi\Tsi.Erp.FirstApi.csproj", "{1AF78CB8-C537-412E-8A70-4D94C799C1D1}"
-EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8ED67362-C8D3-417D-AFD6-38D804498424}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tsi.Erp.FirstApi", "Microservices\Tsi.Erp.FirstApi\Tsi.Erp.FirstApi.csproj", "{1AF78CB8-C537-412E-8A70-4D94C799C1D1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{8809DA4F-740B-42D3-B28F-2C86DB4D12C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin", "Admin", "{0C9C6CFA-590B-4346-9EAC-8AF23469CC2A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{C65D198D-03EA-4277-AC53-41D3702E83B6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsi.Erp.ApiGateway", "ApiGateway\Tsi.Erp.ApiGateway\Tsi.Erp.ApiGateway.csproj", "{E62D4E50-839D-4538-9262-9C7AD4B4AE29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,14 +31,6 @@ Global
 		{1AF78CB8-C537-412E-8A70-4D94C799C1D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AF78CB8-C537-412E-8A70-4D94C799C1D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AF78CB8-C537-412E-8A70-4D94C799C1D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8ED67362-C8D3-417D-AFD6-38D804498424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8ED67362-C8D3-417D-AFD6-38D804498424}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8ED67362-C8D3-417D-AFD6-38D804498424}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8ED67362-C8D3-417D-AFD6-38D804498424}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E62D4E50-839D-4538-9262-9C7AD4B4AE29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E62D4E50-839D-4538-9262-9C7AD4B4AE29}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E62D4E50-839D-4538-9262-9C7AD4B4AE29}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E62D4E50-839D-4538-9262-9C7AD4B4AE29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,7 +40,6 @@ Global
 		{1AF78CB8-C537-412E-8A70-4D94C799C1D1} = {81E7156A-9FAE-4800-A11C-9F79F384BEDC}
 		{8809DA4F-740B-42D3-B28F-2C86DB4D12C5} = {81E7156A-9FAE-4800-A11C-9F79F384BEDC}
 		{0C9C6CFA-590B-4346-9EAC-8AF23469CC2A} = {81E7156A-9FAE-4800-A11C-9F79F384BEDC}
-		{E62D4E50-839D-4538-9262-9C7AD4B4AE29} = {C65D198D-03EA-4277-AC53-41D3702E83B6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D091FBFE-E6C3-4E65-955E-BF9AE9002EE9}

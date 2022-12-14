@@ -12,15 +12,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Tsi.Erp.Shared" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Features\" />
     <Folder Include="Data\" />
     <Folder Include="Entities\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Libraries\Tsi.Erp.Shared\Tsi.Erp.Shared.csproj" />
   </ItemGroup>
 
 </Project>
