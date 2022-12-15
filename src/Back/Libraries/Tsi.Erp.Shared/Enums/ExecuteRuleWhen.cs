@@ -12,33 +12,38 @@ namespace Tsi.Erp.Shared.Enums
     [Flags]
     public enum ExecuteRuleWhen
     {
+        None = 0,
         /// <summary>
         /// TO be executed on all repository commands (before)
         /// </summary>
-        All = 1,
+        BeforeAll = 1,
+        /// <summary>
+        /// TO be executed on all repository commands (after)
+        /// </summary>
+        AfterAll = 2,
         /// <summary>
         /// To be executed before the Insert command (happens before the save changes)
         /// </summary>
-        BeforeInsert = 2,
+        BeforeInsert = 4,
         /// <summary>
         /// To be executed after the Insert command (happens before the save changes)
         /// </summary>
-        AfterInsert = 4,
+        AfterInsert = 8,
         /// <summary>
         /// To be executed before the Update command (happens before the save changes)
         /// </summary>
-        BeforeUpdate = 8,
+        BeforeUpdate = 16,
         /// <summary>
         /// To be executed after the Update command (happens before the save changes)
         /// </summary>
-        AfterUpdate = 16,
+        AfterUpdate = 32,
         /// <summary>
         /// To be executed before the Delete command (happens before the save changes)
         /// </summary>
-        BeforeDelete = 32,
+        BeforeDelete = 64,
         /// <summary>
         /// To be executed after the Delete command (happens before the save changes)
         /// </summary>
-        AfterDelete = 64,
+        AfterDelete = 128,
     }
 }

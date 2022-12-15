@@ -40,9 +40,6 @@ namespace Tsi.Erp.Shared.Internals
         public async Task<IEnumerable<TEntity>> GetManyAsync(Expression<Func<TEntity, bool>> where)
         {
             return await _dbset.AsNoTracking().Where(where).ToListAsync();
-        }
-
-        
-        
+        } 
     }
 }

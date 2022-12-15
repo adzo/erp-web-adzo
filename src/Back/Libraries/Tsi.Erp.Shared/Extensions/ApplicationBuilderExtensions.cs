@@ -1,7 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Builder;
 
-namespace Tsi.Erp.Shared
+namespace Tsi.Erp.Shared.Extensions
 {
     public static class ApplicationBuilderExtensions
     {

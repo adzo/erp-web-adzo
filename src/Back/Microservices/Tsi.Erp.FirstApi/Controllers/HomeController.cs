@@ -2,11 +2,33 @@
 
 namespace Tsi.Erp.FirstApi.Controllers
 {
-    public class HomeController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class HomeController : ControllerBase
     {
-        public IActionResult Index()
+        private readonly IRepository<Gouvernorat> _repo;
+
+        public HomeController(IRepository<Gouvernorat> repo)
         {
-            return View();
+            _repo = repo;
+        }
+
+        [HttpGet()]
+        public async Task<IActionResult> Index()
+        {
+
+
+            var Gouvernorat = new Gouvernorat()
+            {
+                Libelle = "Hello Adzo",
+                Code = 190,
+                LibelleAr = "Hello Adzo",
+                LibelleFr = "Hello Adzo"
+            };
+
+            await _repo.AddAsync(Gouvernorat);
+
+            return Ok("Hello World " + Guid.NewGuid().ToString());
         }
     }
 }

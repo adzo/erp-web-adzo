@@ -3,7 +3,7 @@
 
 namespace Tsi.Erp.FirstApi.Features.ModePaiement.Create.Rules
 {
-    [RuleOn(ExecuteRuleWhen.BeforeInsert | ExecuteRuleWhen.AfterUpdate)]
+    [RuleOn(ExecuteRuleWhen.BeforeInsert | ExecuteRuleWhen.BeforeUpdate)]
     public class CodeUniqueRule : IRule<Gouvernorat>
     {
         public int Order => 0;
@@ -12,9 +12,9 @@ namespace Tsi.Erp.FirstApi.Features.ModePaiement.Create.Rules
 
         private string _errorMessage = string.Empty;
 
-        private readonly IReadOnlyRepository<Gouvernorat> _gouvernoratRepository;
+        private readonly IRepository<Gouvernorat> _gouvernoratRepository;
 
-        public CodeUniqueRule(IReadOnlyRepository<Gouvernorat> gouvernoratRepository)
+        public CodeUniqueRule(IRepository<Gouvernorat> gouvernoratRepository)
         {
             _gouvernoratRepository = gouvernoratRepository;
         }
@@ -25,12 +25,25 @@ namespace Tsi.Erp.FirstApi.Features.ModePaiement.Create.Rules
 
             var entityWithSameCode = await _gouvernoratRepository.GetAsync(g => g.Code.Equals(entity.Code), cancellationToken);
 
-            if (entityWithSameCode is not null && entityWithSameCode.Uid == entity.Uid)
+            if (entityWithSameCode is not null && entityWithSameCode.Uid != entity.Uid)
             {
                 return false;
             }
 
             return true;
+        }
+    }
+
+    [RuleOn(ExecuteRuleWhen.BeforeInsert | ExecuteRuleWhen.BeforeUpdate)]
+    public class CodeUnique2 : IRule<Gouvernorat>
+    {
+        public int Order => 2;
+
+        public string ErrorMessage => "No error";
+
+        public Task<bool> ValidateAsync(Gouvernorat entity, CancellationToken cancellationToken = default)
+        {
+            return Task.FromResult(true);
         }
     }
 }

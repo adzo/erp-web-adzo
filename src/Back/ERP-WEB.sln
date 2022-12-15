@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin", "Admin", "{0C9C6CFA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{C65D198D-03EA-4277-AC53-41D3702E83B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsi.Erp.Shared.UnitTest", "Tests\Library\Tsi.Erp.Shared.UnitTest\Tsi.Erp.Shared.UnitTest.csproj", "{53792AC5-8160-43A2-ABFD-9D25587F6451}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{1AF78CB8-C537-412E-8A70-4D94C799C1D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AF78CB8-C537-412E-8A70-4D94C799C1D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AF78CB8-C537-412E-8A70-4D94C799C1D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53792AC5-8160-43A2-ABFD-9D25587F6451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53792AC5-8160-43A2-ABFD-9D25587F6451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53792AC5-8160-43A2-ABFD-9D25587F6451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53792AC5-8160-43A2-ABFD-9D25587F6451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +46,7 @@ Global
 		{1AF78CB8-C537-412E-8A70-4D94C799C1D1} = {81E7156A-9FAE-4800-A11C-9F79F384BEDC}
 		{8809DA4F-740B-42D3-B28F-2C86DB4D12C5} = {81E7156A-9FAE-4800-A11C-9F79F384BEDC}
 		{0C9C6CFA-590B-4346-9EAC-8AF23469CC2A} = {81E7156A-9FAE-4800-A11C-9F79F384BEDC}
+		{53792AC5-8160-43A2-ABFD-9D25587F6451} = {6E9A8649-21B8-489E-9272-1B32E00C8858}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D091FBFE-E6C3-4E65-955E-BF9AE9002EE9}

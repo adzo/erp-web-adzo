@@ -43,7 +43,7 @@ namespace Tsi.Erp.Shared
         /// <class>ExecuteRuleWhen</class>
         /// </summary>
         /// <param name="executionRules"></param>
-        public RuleOnAttribute(ExecuteRuleWhen executionRules = ExecuteRuleWhen.All)
+        public RuleOnAttribute(ExecuteRuleWhen executionRules = ExecuteRuleWhen.None)
         {
             When = executionRules;
         }
